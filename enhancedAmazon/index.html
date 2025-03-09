@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="nav-logo border">
+        <div class="logo"></div>
+      </div>
+      <div class="nav-address border">
+        <p class="add-first">Deliver to</p>
+        <div class="add-icon">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="add-sec">India</p>
+        </div>
+      </div>
+      
+      <div class="nav-search">
+        <select class="search-select">
+          <option value="All">All</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothes">Clothes</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Furniture">Furniture</option>
+        </select>
+        <input placeholder="Search Amazon" class="search-input">
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      
+      <div class="nav-signin border">
+        <p><span>Hello, sign in</span></p>
+        <p class="nav-second">Account & Lists</p>
+      </div>
+      
+      <div class="nav-return border">
+        <p><span>Returns</span></p>
+        <p class="nav-second">& Orders</p>
+      </div>
+      
+      <div class="nav-cart border">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart <span class="cart-count">0</span>
+      </div>
+    </div>
+    
+    <div class="panel">
+      <div class="panel-all">
+        <i class="fa-solid fa-bars"></i>
+        All
+      </div>
+      <div class="panel-ops">
+        <p>Today's Deals</p>
+        <p>Customer Service</p>
+        <p>Registry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+      </div>
+      <div class="filter-controls">
+        <div class="sort-controls">
+          <label>Sort by:</label>
+          <select id="sort-select">
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+        <div class="price-filter">
+          <label>Price Range:</label>
+          <input type="number" id="price-min" placeholder="Min" min="0">
+          <input type="number" id="price-max" placeholder="Max">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-section">
+    <div class="hero-msg">
+      <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+    </div>
+  </div>
+
+  <div class="shop-section">
+    <!-- Products will be dynamically inserted here by JavaScript -->
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal">
+    <div class="cart-content">
+      <h2>Shopping Cart</h2>
+      <div class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+      <div class="cart-total">Total: $0.00</div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-modal">
+    <div class="checkout-content">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Shipping Address" required>
+        <input type="text" placeholder="Card Number" required pattern="[0-9]{16}">
+        <div class="card-details">
+          <input type="text" placeholder="MM/YY" required pattern="[0-9]{2}/[0-9]{2}">
+          <input type="text" placeholder="CVV" required pattern="[0-9]{3}">
+        </div>
+        <button type="submit">Complete Purchase</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-panel1">
+      Back to Top
+    </div>
+    <div class="foot-panel2">
+      <ul>
+        <p>Get to Know Us</p>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">About Amazon</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Amazon Devices</a>
+        <a href="#">Amazon Science</a>
+      </ul>
+      
+      <ul>
+        <p>Make Money with Us</p>
+        <a href="#">Sell products on Amazon</a>
+        <a href="#">Sell on Amazon Business</a>
+        <a href="#">Sell apps on Amazon</a>
+        <a href="#">Become an Affiliate</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Self-Publish with Us</a>
+      </ul>
+      
+      <ul>
+        <p>Amazon Payment Products</p>
+        <a href="#">Amazon Business Card</a>
+        <a href="#">Shop with Points</a>
+        <a href="#">Reload Your Balance</a>
+        <a href="#">Amazon Currency Converter</a>
+      </ul>
+      
+      <ul>
+        <p>Let Us Help You</p>
+        <a href="#">Amazon and COVID-19</a>
+        <a href="#">Your Account</a>
+        <a href="#">Your Orders</a>
+        <a href="#">Shipping Rates & Policies</a>
+        <a href="#">Returns & Replacements</a>
+        <a href="#">Help</a>
+      </ul>
+    </div>
+    
+    <div class="foot-panel3">
+      <div class="logo"></div>
+    </div>
+    
+    <div class="foot-panel4">
+      <div class="pages">
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Your Ads Privacy Choices</a>
+      </div>
+      <div class="copyright">
+        © 1996-2024, Amazon.com, Inc. or its affiliates
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+<script src="main.js"></script>
+</html>
